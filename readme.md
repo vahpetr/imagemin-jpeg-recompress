@@ -9,6 +9,35 @@
 $ npm install --save imagemin-jpeg-recompress
 ```
 
+#### Ubuntu, Debian
+
+```bash
+apt-get install build-essential autoconf nasm libtool # pkg-config
+cd /opt
+git clone https://github.com/mozilla/mozjpeg.git
+cd mozjpeg
+autoreconf -fiv
+./configure --with-jpeg8
+make
+make install
+export LD_RUN_PATH=/opt/mozjpeg/lib32
+export LD_LIBRARY_PATH=/opt/mozjpeg/lib32
+ln -s /lib32 /lib
+cd /opt
+git clone https://github.com/danielgtaylor/jpeg-archive.git
+cd jpeg-archive/
+make
+make install
+```
+
+#### Mac OS X
+
+```bash
+brew install mozjpeg
+brew install jpeg-archive
+```
+
+More install info [jpeg-archive](https://github.com/danielgtaylor/jpeg-archive)
 
 ## Usage
 
