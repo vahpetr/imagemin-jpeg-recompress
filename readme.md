@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save imagemin-jpeg-recompress
+$ npm install --save-dev vahpetr/imagemin-jpeg-recompress
 ```
 
 #### Ubuntu, Debian
@@ -43,7 +43,7 @@ More install info [jpeg-archive](https://github.com/danielgtaylor/jpeg-archive)
 
 ```js
 const imagemin = require('imagemin');
-const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const imageminJpegRecompress = require('vahpetr/imagemin-jpeg-recompress');
 
 imagemin(['images/*.jpg'], 'build/images', {
 	plugins: [
