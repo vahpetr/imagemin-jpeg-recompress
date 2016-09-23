@@ -1,7 +1,6 @@
 'use strict';
 const execBuffer = require('exec-buffer');
 const isJpg = require('is-jpg');
-const jpegRecompress = require('jpeg-recompress-bin');
 
 module.exports = opts => buf => {
 	opts = Object.assign({}, opts);
@@ -68,7 +67,7 @@ module.exports = opts => buf => {
 
 	return execBuffer({
 		input: buf,
-		bin: jpegRecompress,
+		bin: 'jpeg-recompress',
 		args
 	}).catch(err => {
 		err.message = err.stderr || err.message;
