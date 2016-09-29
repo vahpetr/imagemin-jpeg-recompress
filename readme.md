@@ -2,6 +2,7 @@
 
 > jpeg-recompress imagemin plugin
 
+Custome compilation 'jpeg-recompress' support
 
 ## Install
 
